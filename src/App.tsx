@@ -3,7 +3,7 @@ import './App.css'
 import NbodySimulatorBarnesHut from "./components/NbodySimulatorBarnesHut";
 
 function App() {
-    const [count, setCount] = useState(2)
+    const [count, setCount] = useState(1000)
 
     return (
         <>

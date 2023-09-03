@@ -122,7 +122,11 @@ class Quadtree {
         const s = this.boundary.w;
         const d = this.attractionCenter.dist(p.pos);
 
-        if (s / d < theta) {
+        if (d == 0) {
+            return;
+        }
+
+        if (s / d < 1) {
             p.appendForceFrom(this.attractionCenter, this.mass, G, softening);
         } else {
             if (this.divided) {
