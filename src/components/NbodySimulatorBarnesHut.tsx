@@ -42,7 +42,6 @@ const NbodySimulatorBarnesHut = (props: Props) => {
         for (const particle of particles) {
             quadtree.calculateSumForces(particle, 1, 1, 100);
         }
-        console.log(particles[0].sumForces);
 
         // Update position of each particle
         for (const particle of particles) {
