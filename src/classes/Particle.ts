@@ -18,7 +18,7 @@ class Particle {
     }
 
     appendForceFrom(pos: Vector2D, mass: number, G: number, softening: number) {
-        const force = Vector2D.sub(this.pos, pos);
+        const force = Vector2D.sub(pos, this.pos);
         const distance = force.mag();
         const strength = (G * this.mass * mass) / ((distance * distance) + softening);
         force.normalize();

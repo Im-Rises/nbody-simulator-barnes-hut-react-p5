@@ -37,16 +37,16 @@ const NbodySimulatorBarnesHut = (props: Props) => {
 
         // Fill the quadtee with center of attraction and mass
         quadtree.calculateAttractionCenter();
-
-        // Update sum of forces for each particle
-        for (const particle of particles) {
-            quadtree.calculateSumForces(particle, 1, 1, 100);
-        }
-
-        // Update position of each particle
-        for (const particle of particles) {
-            particle.updatePhysics(1);
-        }
+        console.log(quadtree);
+        // // Update sum of forces for each particle
+        // for (const particle of particles) {
+        //     quadtree.calculateSumForces(particle, 1, 1, 100);
+        // }
+        //
+        // // Update position of each particle
+        // for (const particle of particles) {
+        //     particle.updatePhysics(1);
+        // }
 
         // Draw particles
         p5.background(100);
