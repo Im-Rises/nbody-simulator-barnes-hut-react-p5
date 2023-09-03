@@ -80,6 +80,14 @@ class Quadtree {
         this.southWest = new Quadtree(new Rectangle(x, y + h / 2, w / 2, h / 2), this.capacity, newDepth, this.maxDepth);
         this.southEast = new Quadtree(new Rectangle(x + w / 2, y + h / 2, w / 2, h / 2), this.capacity, newDepth, this.maxDepth);
 
+        for (const p of this.particles) {
+            this.northWest.insert(p);
+            this.northEast.insert(p);
+            this.southWest.insert(p);
+            this.southEast.insert(p);
+        }
+        this.particles = [];
+
         this.divided = true;
     }
 

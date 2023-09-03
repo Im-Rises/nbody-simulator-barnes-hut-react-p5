@@ -23,6 +23,8 @@ const NbodySimulatorBarnesHut = (props: Props) => {
         console.log(quadtree.insert(particles[i]));
     }
 
+    quadtree.calculateAttractionCenter();
+
     console.log(quadtree);
 
     const setup = (p5: p5Types, canvasParentRef: Element) => {
