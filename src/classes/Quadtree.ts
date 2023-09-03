@@ -106,12 +106,15 @@ class Quadtree {
                 (this.northWest.attractionCenter.y + this.northEast.attractionCenter.y
                     + this.southWest.attractionCenter.y + this.southEast.attractionCenter.y) / 4);
             this.mass = this.northWest.mass + this.northEast.mass + this.southWest.mass + this.southEast.mass;
-        } else {
+        } else if (this.particles.length > 0) {
             for (const p of this.particles) {
                 this.attractionCenter.add(p.pos);
                 this.mass += p.mass;
             }
             this.attractionCenter.div(this.particles.length);
+        } else {
+            this.attractionCenter = new Vector2D(0, 0);
+            this.mass = 0;
         }
     }
 
