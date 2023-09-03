@@ -1,3 +1,4 @@
+<!--
 # nbody-simulator-react-p5
 
 <p align="center">
@@ -291,3 +292,4 @@ Quentin MOREL :
 - <https://github.com/Im-Rises>
 
 [![GitHub contributors](https://contrib.rocks/image?repo=Im-Rises/nbody-simulator-react-p5)](https://github.com/Im-Rises/nbody-simulator-react-p5/graphs/contributors)
+-->
