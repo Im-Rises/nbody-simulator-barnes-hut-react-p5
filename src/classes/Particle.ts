@@ -13,9 +13,9 @@ class Particle {
         this.mass = mass;
     }
 
-    appendForceFrom(p: Particle, G: number, softening: number) {
-        this.appendForceFrom(p.pos, p.mass, G, softening);
-    }
+    // appendForceFrom(p: Particle, G: number, softening: number) {
+    //     this.appendForceFrom(p.pos, p.mass, G, softening);
+    // }
 
     appendForceFrom(pos: Vector2D, mass: number, G: number, softening: number) {
         const force = Vector2D.sub(pos, this.pos);
