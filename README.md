@@ -1,7 +1,4 @@
-## Correct bug where the
-
-<!--
-# nbody-simulator-react-p5
+# nbody-simulator-barnes-hut-react-p5
 
 <p align="center">
     <img src="https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB" alt="reactLogo" style="height:50px;">
@@ -14,13 +11,13 @@
 
 ## Description
 
-This is a n-body simulator package made with React Typescript and p5.js.
+This is a n-body simulator using barnes-Hut package made with React Typescript and p5.js.
 
 ## 🚀🚀[You can try it online from your browser](https://im-rises.github.io/particle-simulator-react-p5-website/) 🚀🚀
 
 It works on desktop and mobile as well with different controls (check the `controls` section).
 
-## 🚀🚀 [The package is available on npm](https://www.npmjs.com/package/nbody-simulator-react-p5) 🚀🚀
+## 🚀🚀 [The package is available on npm](https://www.npmjs.com/package/nbody-simulator-barnes-hut-react-p5) 🚀🚀
 
 > **Note**  
 > I also made a C++ version for WebGL2 using OpenGL ES 3.0. You can check it
@@ -28,26 +25,26 @@ It works on desktop and mobile as well with different controls (check the `contr
 
 ## Screenshots
 
-| Screenshot 1                                                                                                              | Screenshot 2                                                                                                              | 
-|---------------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------|
-| ![Screenshot1](https://github.com/Im-Rises/nbody-simulator-react-p5/assets/59691442/59dbae4f-bfe8-4923-ad06-cc6abf07db13) | ![Screenshot2](https://github.com/Im-Rises/nbody-simulator-react-p5/assets/59691442/ec62857c-fb48-4049-8a8c-32a0ccc5fa91) |
+| Screenshot 1                                                                                                                         | Screenshot 2                                                                                                                         | 
+|--------------------------------------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------|
+| ![Screenshot1](https://github.com/Im-Rises/nbody-simulator-barnes-hut-react-p5/assets/59691442/59dbae4f-bfe8-4923-ad06-cc6abf07db13) | ![Screenshot2](https://github.com/Im-Rises/nbody-simulator-barnes-hut-react-p5/assets/59691442/ec62857c-fb48-4049-8a8c-32a0ccc5fa91) |
 
 ## Demo video
 
-https://github.com/Im-Rises/nbody-simulator-react-p5/assets/59691442/20bc593e-7bd0-4d60-9470-a8caed1a45bd
+https://github.com/Im-Rises/nbody-simulator-barnes-hut-react-p5/assets/59691442/20bc593e-7bd0-4d60-9470-a8caed1a45bd
 
 ## Package installation
 
 To install it type the following command in your terminal:
 
 ```bash
-npm install nbody-simulator-react-p5
+npm install nbody-simulator-barnes-hut-react-p5
 ```
 
 Then you can import it in your project with:
 
 ```bash
-import NbodySimulator from 'nbody-simulator-react-p5'
+import NbodySimulator from 'nbody-simulator-barnes-hut-react-p5'
 ```
 
 ## Usage
@@ -56,7 +53,7 @@ To use it you can simply add the component in your project like this:
 
 ```tsx
 import React, {useEffect, useState} from 'react';
-import NbodySimulator from 'nbody-simulator-react-p5';
+import NbodySimulator from 'nbody-simulator-barnes-hut-react-p5';
 import './App.css';
 
 const App: React.FC = () => {
@@ -93,7 +90,7 @@ or you can change all the settings like this:
 
 ```tsx
 import React, {useEffect, useState} from 'react';
-import NbodySimulator from 'nbody-simulator-react-p5';
+import NbodySimulator from 'nbody-simulator-barnes-hut-react-p5';
 import './App.css';
 
 const App: React.FC = () => {
@@ -173,7 +170,7 @@ when the window is resized.
 > The default values of the props are the same as the ones in the example above.
 
 You can find the complete example of the project in the GitHub
-repository [here](https://im-rises.github.io/nbody-simulator-react-p5-website).
+repository [here](https://im-rises.github.io/nbody-simulator-barnes-hut-react-p5-website).
 
 > **Note**  
 > Be sure to do like in the example, the parent div of the canvas must be set before the p5 canvas is created.
@@ -222,11 +219,11 @@ root.render(
 
 ## GitHub Actions
 
-[//]: # ([![pages-build-deployment]&#40;https://github.com/Im-Rises/nbody-simulator-react-p5/actions/workflows/pages/pages-build-deployment/badge.svg&#41;]&#40;https://github.com/Im-Rises/nbody-simulator-react-p5/actions/workflows/pages/pages-build-deployment&#41;)
-[![Node.js CI](https://github.com/Im-Rises/nbody-simulator-react-p5/actions/workflows/node.js.yml/badge.svg?branch=main)](https://github.com/Im-Rises/nbody-simulator-react-p5/actions/workflows/node.js.yml)
-[![ESLint](https://github.com/Im-Rises/nbody-simulator-react-p5/actions/workflows/eslint.yml/badge.svg?branch=main)](https://github.com/Im-Rises/nbody-simulator-react-p5/actions/workflows/eslint.yml)
-[![CodeQL](https://github.com/Im-Rises/nbody-simulator-react-p5/actions/workflows/codeql.yml/badge.svg?branch=main)](https://github.com/Im-Rises/nbody-simulator-react-p5/actions/workflows/codeql.yml)
-[![Node.js Package](https://github.com/Im-Rises/nbody-simulator-react-p5/actions/workflows/npm-publish.yml/badge.svg)](https://github.com/Im-Rises/nbody-simulator-react-p5/actions/workflows/npm-publish.yml)
+[//]: # ([![pages-build-deployment]&#40;https://github.com/Im-Rises/nbody-simulator-barnes-hut-react-p5/actions/workflows/pages/pages-build-deployment/badge.svg&#41;]&#40;https://github.com/Im-Rises/nbody-simulator-barnes-hut-react-p5/actions/workflows/pages/pages-build-deployment&#41;)
+[![Node.js CI](https://github.com/Im-Rises/nbody-simulator-barnes-hut-react-p5/actions/workflows/node.js.yml/badge.svg?branch=main)](https://github.com/Im-Rises/nbody-simulator-barnes-hut-react-p5/actions/workflows/node.js.yml)
+[![ESLint](https://github.com/Im-Rises/nbody-simulator-barnes-hut-react-p5/actions/workflows/eslint.yml/badge.svg?branch=main)](https://github.com/Im-Rises/nbody-simulator-barnes-hut-react-p5/actions/workflows/eslint.yml)
+[![CodeQL](https://github.com/Im-Rises/nbody-simulator-barnes-hut-react-p5/actions/workflows/codeql.yml/badge.svg?branch=main)](https://github.com/Im-Rises/nbody-simulator-barnes-hut-react-p5/actions/workflows/codeql.yml)
+[![Node.js Package](https://github.com/Im-Rises/nbody-simulator-barnes-hut-react-p5/actions/workflows/npm-publish.yml/badge.svg)](https://github.com/Im-Rises/nbody-simulator-barnes-hut-react-p5/actions/workflows/npm-publish.yml)
 
 The project is set up to run the following actions:
 
@@ -264,7 +261,8 @@ react-device-detect:
 
 The Coding Challenge (math and physics):  
 <https://www.youtube.com/watch?v=OAcXnzRNiCY>  
-<https://www.youtube.com/watch?v=GjbKsOkN1Oc>
+<https://www.youtube.com/watch?v=GjbKsOkN1Oc>  
+<https://www.youtube.com/watch?v=OJxEcs0w_kE>
 
 P5.js:  
 <https://p5js.org/>
@@ -278,13 +276,13 @@ Wikipedia Barnes-Hut simulation:
 ## Links
 
 Check the source code
-on [![github](https://user-images.githubusercontent.com/59691442/223556058-6244e346-8117-43cd-97c6-bf68611bf286.svg)](https://github.com/im-rises/nbody-simulator-react-p5)
+on [![github](https://user-images.githubusercontent.com/59691442/223556058-6244e346-8117-43cd-97c6-bf68611bf286.svg)](https://github.com/im-rises/nbody-simulator-barnes-hut-react-p5)
 
 Check the demo
-on [![github](https://user-images.githubusercontent.com/59691442/223556058-6244e346-8117-43cd-97c6-bf68611bf286.svg)](https://github.com/im-rises/nbody-simulator-react-p5-website)
+on [![github](https://user-images.githubusercontent.com/59691442/223556058-6244e346-8117-43cd-97c6-bf68611bf286.svg)](https://github.com/im-rises/nbody-simulator-barnes-hut-react-p5-website)
 
 Check the package
-on [![npm](https://user-images.githubusercontent.com/59691442/223556055-4e9ef014-79d4-4136-ac07-b837b49066c8.svg)](https://www.npmjs.com/package/nbody-simulator-react-p5)
+on [![npm](https://user-images.githubusercontent.com/59691442/223556055-4e9ef014-79d4-4136-ac07-b837b49066c8.svg)](https://www.npmjs.com/package/nbody-simulator-barnes-hut-react-p5)
 
 ## Contributors
 
@@ -293,5 +291,5 @@ Quentin MOREL :
 - @Im-Rises
 - <https://github.com/Im-Rises>
 
-[![GitHub contributors](https://contrib.rocks/image?repo=Im-Rises/nbody-simulator-react-p5)](https://github.com/Im-Rises/nbody-simulator-react-p5/graphs/contributors)
+[![GitHub contributors](https://contrib.rocks/image?repo=Im-Rises/nbody-simulator-barnes-hut-react-p5)](https://github.com/Im-Rises/nbody-simulator-barnes-hut-react-p5/graphs/contributors)
 -->
