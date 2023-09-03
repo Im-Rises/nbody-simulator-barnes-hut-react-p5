@@ -16,11 +16,6 @@ class Rectangle {
     }
 
     contains(p: Vector2D) {
-        // return (p.x >= this.x - this.w &&
-        //     p.x <= this.x + this.w &&
-        //     p.y >= this.y - this.h &&
-        //     p.y <= this.y + this.h);
-
         return (p.x >= this.x &&
             p.x <= this.x + this.w &&
             p.y >= this.y &&
@@ -47,6 +42,10 @@ class Quadtree {
         this.capacity = capacity;
         this.depth = depth;
         this.maxDepth = maxDepth;
+        this.clear();
+    }
+
+    clear() {
         this.divided = false;
         this.mass = 0;
         this.attractionCenter = new Vector2D(0, 0);

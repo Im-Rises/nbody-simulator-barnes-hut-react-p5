@@ -20,12 +20,7 @@ const NbodySimulatorBarnesHut = (props: Props) => {
     const particles = [];
     for (let i = 0; i < mergedProps.particlesCount; i++) {
         particles.push(new Particle(Math.random() * widthHeight, Math.random() * widthHeight, 1));
-        quadtree.insert(particles[i]);
     }
-
-    quadtree.calculateAttractionCenter();
-
-    console.log(quadtree);
 
     const setup = (p5: p5Types, canvasParentRef: Element) => {
         p5.createCanvas(widthHeight, widthHeight).parent(canvasParentRef);
@@ -33,8 +28,30 @@ const NbodySimulatorBarnesHut = (props: Props) => {
 
 
     const draw = (p5: p5Types) => {
+        // Create quadtree
+        for (const particle of particles) {
+            quadtree.insert(particle);
+        }
+
+        // Fill the quadtee with center of attraction and mass
+        quadtree.calculateAttractionCenter();
+
+        // Update sum of forces for each particle
+        for (const particle of particles) {
+            quadtree.calculateSumForces(particle, 1, 1, 1);
+        }
+
+        // Update position of each particle
+        for (const particle of particles) {
+            particle.updatePhysics(1);
+        }
+
+        // Draw particles
         p5.background(100);
         quadtree.show(p5);
+
+        // Reset quadtree
+        quadtree.clear();
     };
 
     return <Sketch setup={setup} draw={draw}/>;
