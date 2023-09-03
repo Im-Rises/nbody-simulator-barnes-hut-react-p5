@@ -20,7 +20,7 @@ const NbodySimulatorBarnesHut = (props: Props) => {
     const particles = [];
     for (let i = 0; i < mergedProps.particlesCount; i++) {
         particles.push(new Particle(Math.random() * widthHeight, Math.random() * widthHeight, 1));
-        console.log(quadtree.insert(particles[i]));
+        quadtree.insert(particles[i]);
     }
 
     quadtree.calculateAttractionCenter();

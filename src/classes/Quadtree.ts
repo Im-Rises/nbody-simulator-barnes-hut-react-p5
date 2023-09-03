@@ -16,9 +16,14 @@ class Rectangle {
     }
 
     contains(p: Vector2D) {
-        return (p.x >= this.x - this.w &&
+        // return (p.x >= this.x - this.w &&
+        //     p.x <= this.x + this.w &&
+        //     p.y >= this.y - this.h &&
+        //     p.y <= this.y + this.h);
+
+        return (p.x >= this.x &&
             p.x <= this.x + this.w &&
-            p.y >= this.y - this.h &&
+            p.y >= this.y &&
             p.y <= this.y + this.h);
     }
 }
