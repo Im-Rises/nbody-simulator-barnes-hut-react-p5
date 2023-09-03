@@ -120,7 +120,7 @@ class Quadtree {
         const d = this.attractionCenter.dist(p.pos);
 
         if (s / d < theta) {
-            p.attract(this.attractionCenter, this.mass, G, softening);
+            p.appendForceFrom(this.attractionCenter, this.mass, G, softening);
         } else {
             if (this.divided) {
                 this.northWest.calculateSumForces(p, theta, G, softening);
@@ -130,7 +130,7 @@ class Quadtree {
             } else {
                 for (const p2 of this.particles) {
                     if (p2 != p) {
-                        p.attract(p2, G, softening);
+                        p.appendForceFrom(p2, G, softening);
                     }
                 }
             }

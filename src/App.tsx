@@ -8,7 +8,14 @@ function App() {
     return (
         <>
             <NbodySimulatorBarnesHut particlesCount={count}/>
-            <input type={'number'} value={count} onChange={(e) => setCount(parseInt(e.target.value))}/>
+            <input type={'number'} value={count} min={1} onChange={(e) => {
+                if (e.target.value === '' || parseInt(e.target.value) < 1) {
+                    setCount(parseInt("1"));
+                    return;
+                }
+                setCount(parseInt(e.target.value))
+            }
+            }/>
         </>
     )
 }

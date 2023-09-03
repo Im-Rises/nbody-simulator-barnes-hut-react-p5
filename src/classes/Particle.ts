@@ -13,11 +13,24 @@ class Particle {
         this.mass = mass;
     }
 
-    attract(p: Particle, G: number, softening: number) {
-        this.attract(p.pos, p.mass, G, softening);
+    // attract(p: Particle, G: number, softening: number) {
+    //     this.attract(p.pos, p.mass, G, softening);
+    // }
+    //
+    // attract(pos: Vector2D, mass: number, G: number, softening: number) {
+    //     const force = Vector2D.sub(this.pos, pos);
+    //     const distance = force.mag();
+    //     const strength = (G * this.mass * mass) / ((distance * distance) + softening);
+    //     force.normalize();
+    //     force.mult(strength);
+    //     this.sumForces.add(force);
+    // }
+
+    appendForceFrom(p: Particle, G: number, softening: number) {
+        this.appendForceFrom(p.pos, p.mass, G, softening);
     }
 
-    attract(pos: Vector2D, mass: number, G: number, softening: number) {
+    appendForceFrom(pos: Vector2D, mass: number, G: number, softening: number) {
         const force = Vector2D.sub(this.pos, pos);
         const distance = force.mag();
         const strength = (G * this.mass * mass) / ((distance * distance) + softening);

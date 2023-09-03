@@ -5,25 +5,27 @@ import Particle from "../classes/Particle";
 
 type Props = {
     particlesCount: number;
+    widthHeight: number;
 }
 
 const defaultProps: Props = {
     particlesCount: 10,
+    widthHeight: 500,
 }
 
 const NbodySimulatorBarnesHut = (props: Props) => {
     const mergedProps = {...defaultProps, ...props};
 
-    const widthHeight = 500;
-    const quadtree = new Quadtree(new Rectangle(0, 0, widthHeight, widthHeight), 4, 0, 10);
+    const quadtree = new Quadtree(new Rectangle(0, 0, mergedProps.widthHeight, mergedProps.widthHeight),
+        4, 0, 10);
 
     const particles = [];
     for (let i = 0; i < mergedProps.particlesCount; i++) {
-        particles.push(new Particle(Math.random() * widthHeight, Math.random() * widthHeight, 1));
+        particles.push(new Particle(Math.random() * mergedProps.widthHeight, Math.random() * mergedProps.widthHeight, 1));
     }
 
     const setup = (p5: p5Types, canvasParentRef: Element) => {
-        p5.createCanvas(widthHeight, widthHeight).parent(canvasParentRef);
+        p5.createCanvas(mergedProps.widthHeight, mergedProps.widthHeight).parent(canvasParentRef);
     };
 
 
@@ -38,8 +40,9 @@ const NbodySimulatorBarnesHut = (props: Props) => {
 
         // Update sum of forces for each particle
         for (const particle of particles) {
-            quadtree.calculateSumForces(particle, 1, 1, 1);
+            quadtree.calculateSumForces(particle, 1, 1, 100);
         }
+        console.log(particles[0].sumForces);
 
         // Update position of each particle
         for (const particle of particles) {
