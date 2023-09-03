@@ -1,6 +1,7 @@
-import {Point, Rectangle, Quadtree} from "../classesbackup/Quadtree";
+import {Quadtree, Rectangle} from "../classes/Quadtree";
 import p5Types from "p5";
 import Sketch from "react-p5";
+import Particle from "../classes/Particle";
 
 type Props = {
     particlesCount: number;
@@ -9,29 +10,20 @@ type Props = {
 const defaultProps: Props = {
     particlesCount: 10,
 }
+
 const NbodySimulatorBarnesHut = (props: Props) => {
     const mergedProps = {...defaultProps, ...props};
 
     const widthHeight = 500;
-    const quadtree = new Quadtree(new Rectangle(0, 0, widthHeight, widthHeight), 4);
+    const quadtree = new Quadtree(new Rectangle(0, 0, widthHeight, widthHeight), 4, 0, 10);
 
-    const points = [];
+    const particles = [];
     for (let i = 0; i < mergedProps.particlesCount; i++) {
-        points.push(new Point(Math.random() * widthHeight, Math.random() * widthHeight));
-        console.log(quadtree.insert(points[i]));
+        particles.push(new Particle(Math.random() * widthHeight, Math.random() * widthHeight, 1));
+        console.log(quadtree.insert(particles[i]));
     }
 
-    // console.log(quadtree);
-
-    // // Intersecting rectangle
-    // const range = new Rectangle(250, 250, 100, 100);
-    // const pointsIntIntersection = [];
-    // quadtree.query(range, pointsIntIntersection);
-    // console.log(pointsIntIntersection);
-
-    quadtree.calculateWeightAttractionCenter();
     console.log(quadtree);
-
 
     const setup = (p5: p5Types, canvasParentRef: Element) => {
         p5.createCanvas(widthHeight, widthHeight).parent(canvasParentRef);
@@ -41,17 +33,6 @@ const NbodySimulatorBarnesHut = (props: Props) => {
     const draw = (p5: p5Types) => {
         p5.background(100);
         quadtree.show(p5);
-
-        // // Draw the rectangle of intersection
-        // p5.strokeWeight(1);
-        // p5.stroke(0, 255, 0);
-        // p5.rect(range.x - range.w, range.y - range.h, range.w * 2, range.h * 2);
-        // // Draw all the points which are in the intersection
-        // for (const p of pointsIntIntersection) {
-        //     p5.strokeWeight(4);
-        //     p5.stroke(0, 255, 0);
-        //     p5.point(p.x, p.y);
-        // }
     };
 
     return <Sketch setup={setup} draw={draw}/>;
