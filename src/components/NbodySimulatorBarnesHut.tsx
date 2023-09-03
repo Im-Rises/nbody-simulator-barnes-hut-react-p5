@@ -1,4 +1,4 @@
-import {Point, Rectangle, Quadtree} from "../classes/Quadtree";
+import {Point, Rectangle, Quadtree} from "../classesbackup/Quadtree";
 import p5Types from "p5";
 import Sketch from "react-p5";
 
