@@ -14,13 +14,6 @@ class Particle {
     }
 
     attract(p: Particle, G: number, softening: number) {
-        // const force = Vector2D.sub(this.pos, p.pos);
-        // const distance = force.mag();
-        // const strength = (G * this.mass * p.mass) / ((distance * distance) + softening);
-        // force.normalize();
-        // force.mult(strength);
-        // p.sumForces.add(force);
-
         this.attract(p.pos, p.mass, G, softening);
     }
 
