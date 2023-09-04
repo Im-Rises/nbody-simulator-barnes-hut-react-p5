@@ -42,6 +42,7 @@ class Quadtree {
         this.capacity = capacity;
         this.depth = depth;
         this.maxDepth = maxDepth;
+        this.clear();
     }
 
     clear() {
@@ -143,20 +144,23 @@ class Quadtree {
         }
     }
 
-    show(p5: p5Types) {
-        p5.stroke(255);
-        p5.noFill();
-        p5.rect(this.boundary.x, this.boundary.y, this.boundary.w, this.boundary.h);
+    show(p5: p5Types, showQuadtree: boolean) {
         if (this.divided) {
-            this.northWest.show(p5);
-            this.northEast.show(p5);
-            this.southWest.show(p5);
-            this.southEast.show(p5);
-        }
-        p5.stroke(0, 255, 255);
-        for (const particle of this.particles) {
-            p5.strokeWeight(4);
-            p5.point(particle.pos.x, particle.pos.y);
+            this.northWest.show(p5, showQuadtree);
+            this.northEast.show(p5, showQuadtree);
+            this.southWest.show(p5, showQuadtree);
+            this.southEast.show(p5, showQuadtree);
+        } else {
+            if (showQuadtree) {
+                p5.stroke(255);
+                p5.noFill();
+                p5.rect(this.boundary.x, this.boundary.y, this.boundary.w, this.boundary.h);
+            }
+            p5.stroke(0, 255, 255);
+            for (const particle of this.particles) {
+                p5.strokeWeight(4);
+                p5.point(particle.pos.x, particle.pos.y);
+            }
         }
     }
 
