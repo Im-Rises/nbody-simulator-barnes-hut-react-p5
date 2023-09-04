@@ -15,9 +15,9 @@ jobs:
       - uses: actions/setup-node@v3
         with:
           node-version: 16
-      - yarn install
-      - yarn build
-      - yarn prepublish
+      - run: yarn install
+      - run: yarn build
+      - run: yarn prepublish
 
   publish-npm:
     needs: build
