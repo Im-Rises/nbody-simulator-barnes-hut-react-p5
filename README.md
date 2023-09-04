@@ -31,7 +31,7 @@ It works on desktop and mobile as well with different controls (check the `contr
 
 ## Demo video
 
-https://github.com/Im-Rises/nbody-simulator-barnes-hut-react-p5/assets/59691442/20bc593e-7bd0-4d60-9470-a8caed1a45bd
+https://github.com/Im-Rises/nbody-simulator-barnes-hut-react-p5/assets/59691442/5f216fe5-699f-477f-a5d7-559af7c7a4c9
 
 ## Package installation
 
@@ -44,9 +44,10 @@ npm install nbody-simulator-barnes-hut-react-p5
 Then you can import it in your project with:
 
 ```bash
-import NbodySimulator from 'nbody-simulator-barnes-hut-react-p5'
+import NbodySimulatorBarnesHut from 'nbody-simulator-barnes-hut-react-p5'
 ```
 
+<!--
 ## Usage
 
 To use it you can simply add the component in your project like this:
@@ -190,6 +191,7 @@ $$ F = G \frac{m_1 m_2}{(r^2 + \epsilon^2)^\frac{3}{2}} $$
 
 Where G is the gravitational constant, m1 and m2 are the masses of the particles, r is the distance between the
 particles and d is the softening parameter.
+-->
 
 ## Known issues
 

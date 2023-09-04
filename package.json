@@ -1,7 +1,7 @@
 {
   "name": "nbody-simulator-react-barnes-hut-react-p5",
   "private": true,
-  "version": "0.0.0",
+  "version": "0.5.0",
   "type": "module",
   "license": "MIT",
   "repository": {
