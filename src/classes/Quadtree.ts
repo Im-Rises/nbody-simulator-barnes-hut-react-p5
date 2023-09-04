@@ -101,11 +101,12 @@ class Quadtree {
             this.northEast.calculateAttractionCenter();
             this.southWest.calculateAttractionCenter();
             this.southEast.calculateAttractionCenter();
-            this.attractionCenter = new Vector2D((this.northWest.attractionCenter.x + this.northEast.attractionCenter.x
-                + this.southWest.attractionCenter.x + this.southEast.attractionCenter.x) / 4,
-                (this.northWest.attractionCenter.y + this.northEast.attractionCenter.y
-                    + this.southWest.attractionCenter.y + this.southEast.attractionCenter.y) / 4);
             this.mass = this.northWest.mass + this.northEast.mass + this.southWest.mass + this.southEast.mass;
+            const x = (this.northWest.attractionCenter.x * this.northWest.mass + this.northEast.attractionCenter.x * this.northEast.mass +
+                this.southWest.attractionCenter.x * this.southWest.mass + this.southEast.attractionCenter.x * this.southEast.mass) / this.mass;
+            const y = (this.northWest.attractionCenter.y * this.northWest.mass + this.northEast.attractionCenter.y * this.northEast.mass +
+                this.southWest.attractionCenter.y * this.southWest.mass + this.southEast.attractionCenter.y * this.southEast.mass) / this.mass;
+            this.attractionCenter = new Vector2D(x, y);
         } else if (this.particles.length > 0) {
             for (const p of this.particles) {
                 this.attractionCenter.add(p.pos);
