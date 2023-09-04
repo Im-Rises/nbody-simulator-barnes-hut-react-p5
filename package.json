@@ -3,6 +3,56 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
+  "license": "MIT",
+  "repository": {
+    "url": "https://github.com/Im-Rises/nbody-simulator-barnes-hut-react-p5",
+    "type": "git"
+  },
+  "author": {
+    "url": "https://github.com/Im-Rises/",
+    "name": "Im-Rises (Quentin Morel)",
+    "email": "Quentin-morel8_@hotmail.com"
+  },
+  "description": "A react component that simulates the n-body problem using the Barnes-Hut algorithm and the p5.js library.",
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org/"
+  },
+  "main": "dist/components/NbodySimulator.js",
+  "files": [
+    "LICENSE",
+    "README.md",
+    "package.json",
+    "tsconfig.json",
+    "dist/components/NbodySimulator.js",
+    "dist/components/NbodySimulator.js.map",
+    "dist/components/NbodySimulator.d.ts",
+    "dist/components/NbodySimulator.d.ts.map",
+    "src/components/NbodySimulator.tsx",
+    "dist/classes/Particle.js",
+    "dist/classes/Particle.js.map",
+    "dist/classes/Particle.d.ts",
+    "dist/classes/Particle.d.ts.map",
+    "src/classes/Particle.ts",
+    "dist/constants/constant-nbody-simulator.js",
+    "dist/constants/constant-nbody-simulator.js.map",
+    "dist/constants/constant-nbody-simulator.d.ts",
+    "dist/constants/constant-nbody-simulator.d.ts.map",
+    "src/constants/constant-nbody-simulator.ts"
+  ],
+  "keywords": [
+    "react",
+    "p5",
+    "particle",
+    "nbody",
+    "n-body",
+    "nbody-simulator",
+    "n-body-simulator",
+    "simulator",
+    "effect",
+    "react-p5",
+    "typescript",
+    "javascript"
+  ],
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
