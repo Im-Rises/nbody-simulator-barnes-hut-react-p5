@@ -25,9 +25,11 @@ It works on desktop and mobile as well with different controls (check the `contr
 
 ## Screenshots
 
-| Screenshot 1                                                                                                                         | Screenshot 2                                                                                                                         | 
-|--------------------------------------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------|
-| ![Screenshot1](https://github.com/Im-Rises/nbody-simulator-barnes-hut-react-p5/assets/59691442/59dbae4f-bfe8-4923-ad06-cc6abf07db13) | ![Screenshot2](https://github.com/Im-Rises/nbody-simulator-barnes-hut-react-p5/assets/59691442/ec62857c-fb48-4049-8a8c-32a0ccc5fa91) |
+[//]: # (| Screenshot 1                                                                                                                         | Screenshot 2                                                                                                                         | )
+
+[//]: # (|--------------------------------------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------|)
+
+[//]: # (| ![Screenshot1]&#40;https://github.com/Im-Rises/nbody-simulator-barnes-hut-react-p5/assets/59691442/59dbae4f-bfe8-4923-ad06-cc6abf07db13&#41; | ![Screenshot2]&#40;https://github.com/Im-Rises/nbody-simulator-barnes-hut-react-p5/assets/59691442/ec62857c-fb48-4049-8a8c-32a0ccc5fa91&#41; |)
 
 ## Demo video
 
@@ -294,4 +296,3 @@ Quentin MOREL :
 - <https://github.com/Im-Rises>
 
 [![GitHub contributors](https://contrib.rocks/image?repo=Im-Rises/nbody-simulator-barnes-hut-react-p5)](https://github.com/Im-Rises/nbody-simulator-barnes-hut-react-p5/graphs/contributors)
--->
