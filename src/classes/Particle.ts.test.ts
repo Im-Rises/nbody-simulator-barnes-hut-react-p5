@@ -2,7 +2,6 @@ import {expect, test} from 'vitest'
 import Particle from "./Particle";
 import Vector2D from "./Vector2D";
 
-/* Methods */
 test('Particle.constructor', () => {
     const p = new Particle(1, 2, 3);
     expect(p).toMatchObject({
