@@ -18,7 +18,7 @@ const NbodySimulatorBarnesHut = (props: Props) => {
 
     // Create quadtree
     const quadtree = new Quadtree(new Rectangle(0, 0, mergedProps.widthHeight, mergedProps.widthHeight),
-        4, 0, 10);
+        1, 0, 1000);
 
     const particles: Particle[] = [];
     for (let i = 0; i < mergedProps.particlesCount; i++) {

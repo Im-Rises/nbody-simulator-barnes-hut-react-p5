@@ -42,10 +42,6 @@ class Quadtree {
         this.capacity = capacity;
         this.depth = depth;
         this.maxDepth = maxDepth;
-        this.divided = false;
-        this.mass = 0;
-        this.attractionCenter = new Vector2D(0, 0);
-        this.particles = [];
     }
 
     clear() {
