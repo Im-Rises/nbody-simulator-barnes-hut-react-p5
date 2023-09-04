@@ -127,7 +127,7 @@ class Quadtree {
             return;
         }
 
-        if (s / d < 1) {
+        if (s / d < theta) {
             p.appendForceFrom(this.attractionCenter, this.mass, G, softening);
         } else {
             if (this.divided) {
