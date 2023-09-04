@@ -42,7 +42,10 @@ class Quadtree {
         this.capacity = capacity;
         this.depth = depth;
         this.maxDepth = maxDepth;
-        this.clear();
+        this.divided = false;
+        this.mass = 0;
+        this.attractionCenter = new Vector2D(0, 0);
+        this.particles = [];
     }
 
     clear() {
@@ -52,7 +55,7 @@ class Quadtree {
         this.particles = [];
     }
 
-    insert(p: Particle) {
+    insert(p: Particle): boolean {
         if (!this.boundary.contains(p.pos)) {
             return false;
         }

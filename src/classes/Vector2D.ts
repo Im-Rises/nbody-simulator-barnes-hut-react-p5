@@ -69,11 +69,12 @@ class Vector2D {
         return Math.sqrt(v.x * v.x + v.y * v.y);
     }
 
-    static normalize(v: Vector2D) {
+    static normalize(v: Vector2D): Vector2D {
         const m = Vector2D.mag(v);
         if (m != 0) {
             return Vector2D.div(v, m);
         }
+        throw new Error("Cannot normalize a zero vector");
     }
 
     static limit(v: Vector2D, max: number) {
