@@ -37,8 +37,11 @@ class Vector2D {
 
     normalize() {
         const m = this.mag();
-        if (m != 0) {
+        if (m !== 0) {
             this.div(m);
+        } else {
+            this.x = 0;
+            this.y = 0;
         }
     }
 
@@ -63,6 +66,11 @@ class Vector2D {
 
     static div(v: Vector2D, scalar: number) {
         return new Vector2D(v.x / scalar, v.y / scalar);
+    }
+
+    static dist(v1: Vector2D, v2: Vector2D) {
+        return Math.sqrt((v1.x - v2.x) * (v1.x - v2.x) +
+            (v1.y - v2.y) * (v1.y - v2.y));
     }
 
     static mag(v: Vector2D) {
