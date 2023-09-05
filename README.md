@@ -277,6 +277,9 @@ P5.js React:
 Wikipedia Barnes-Hut simulation:  
 <https://en.wikipedia.org/wiki/Barnes–Hut_simulation>
 
+Barnes-Hut algorithm:  
+<http://arborjs.org/docs/barnes-hut>  
+
 ## Links
 
 Check the source code

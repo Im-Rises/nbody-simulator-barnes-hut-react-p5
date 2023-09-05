@@ -37,8 +37,11 @@ class Vector2D {
 
     normalize() {
         const m = this.mag();
-        if (m != 0) {
+        if (m !== 0) {
             this.div(m);
+        } else {
+            this.x = 0;
+            this.y = 0;
         }
     }
 
@@ -49,23 +52,28 @@ class Vector2D {
         }
     }
 
-    static add(v1: Vector2D, v2: Vector2D) {
+    static add(v1: Vector2D, v2: Vector2D): Vector2D {
         return new Vector2D(v1.x + v2.x, v1.y + v2.y);
     }
 
-    static sub(v1: Vector2D, v2: Vector2D) {
+    static sub(v1: Vector2D, v2: Vector2D): Vector2D {
         return new Vector2D(v1.x - v2.x, v1.y - v2.y);
     }
 
-    static mult(v: Vector2D, scalar: number) {
+    static mult(v: Vector2D, scalar: number): Vector2D {
         return new Vector2D(v.x * scalar, v.y * scalar);
     }
 
-    static div(v: Vector2D, scalar: number) {
+    static div(v: Vector2D, scalar: number): Vector2D {
         return new Vector2D(v.x / scalar, v.y / scalar);
     }
 
-    static mag(v: Vector2D) {
+    static dist(v1: Vector2D, v2: Vector2D): number {
+        return Math.sqrt((v1.x - v2.x) * (v1.x - v2.x) +
+            (v1.y - v2.y) * (v1.y - v2.y));
+    }
+
+    static mag(v: Vector2D): number {
         return Math.sqrt(v.x * v.x + v.y * v.y);
     }
 
@@ -77,10 +85,11 @@ class Vector2D {
         throw new Error("Cannot normalize a zero vector");
     }
 
-    static limit(v: Vector2D, max: number) {
+    static limit(v: Vector2D, max: number): Vector2D {
         if (Vector2D.mag(v) > max) {
             return Vector2D.mult(Vector2D.normalize(v), max);
         }
+        return v;
     }
 }
 
