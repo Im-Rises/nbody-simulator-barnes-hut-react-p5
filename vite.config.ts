@@ -7,8 +7,10 @@ export default defineConfig({
     plugins: [
         react(),
         dts({
-            insertTypesEntry: true,
-        }),
+                include: ["src/components/NbodySimulatorBarnesHut.tsx"],
+                insertTypesEntry: true,
+            }
+        ),
     ],
     build: {
         target: 'esnext', // Ensure compatibility with modern browsers
@@ -24,7 +26,7 @@ export default defineConfig({
                 dir: 'dist',
                 entryFileNames: 'NbodySimulatorBarnesHut.js',
                 // chunkFileNames: 'NbodySimulatorBarnesHut.js',
-                // sourcemap: true,
+                sourcemap: true,
                 // compact: false,
             },
         },
