@@ -24,7 +24,8 @@
     "noUnusedLocals": true,
     "noUnusedParameters": true,
     "noFallthroughCasesInSwitch": true,
-    "strictPropertyInitialization": false
+    "strictPropertyInitialization": false,
+    "esModuleInterop": true
   },
   "include": [
     "src"
