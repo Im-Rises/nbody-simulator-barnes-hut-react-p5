@@ -17,32 +17,12 @@
   "publishConfig": {
     "registry": "https://registry.npmjs.org/"
   },
-  "main": "dist/components/NbodySimulator.js",
+  "main": "dist/NbodySimulatorBarnesHut.js",
   "files": [
     "LICENSE",
     "README.md",
     "package.json",
-    "tsconfig.json",
-    "dist/components/NbodySimulatorBarnesHut.js",
-    "dist/components/NbodySimulatorBarnesHut.js.map",
-    "dist/components/NbodySimulatorBarnesHut.d.ts",
-    "dist/components/NbodySimulatorBarnesHut.d.ts.map",
-    "src/components/NbodySimulatorBarnesHut.tsx",
-    "dist/classes/Particle.js",
-    "dist/classes/Particle.js.map",
-    "dist/classes/Particle.d.ts",
-    "dist/classes/Particle.d.ts.map",
-    "src/classes/Particle.ts",
-    "dist/classes/QuadTree.js",
-    "dist/classes/QuadTree.js.map",
-    "dist/classes/QuadTree.d.ts",
-    "dist/classes/Quadtree.d.ts.map",
-    "src/classes/Quadtree.ts",
-    "dist/classes/Vector2D.js",
-    "dist/classes/Vector2D.js.map",
-    "dist/classes/Vector2D.d.ts",
-    "dist/classes/Vector2D.d.ts.map",
-    "src/classes/Vector2D.ts"
+    "dist/NbodySimulatorBarnesHut.js"
   ],
   "keywords": [
     "react",
