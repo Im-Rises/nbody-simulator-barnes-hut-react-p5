@@ -1,7 +1,7 @@
 {
   "name": "nbody-simulator-react-barnes-hut-react-p5",
   "private": false,
-  "version": "0.5.4",
+  "version": "0.5.6",
   "type": "module",
   "license": "MIT",
   "repository": {
@@ -19,7 +19,8 @@
     "README.md",
     "package.json",
     "dist/NbodySimulatorBarnesHut.js",
-    "dist/NbodySimulatorBarnesHut.js.map"
+    "dist/NbodySimulatorBarnesHut.js.map",
+    "dist/components/NbodySimulatorBarnesHut.d.ts"
   ],
   "types": "dist/components/NbodySimulatorBarnesHut.d.ts",
   "keywords": [
