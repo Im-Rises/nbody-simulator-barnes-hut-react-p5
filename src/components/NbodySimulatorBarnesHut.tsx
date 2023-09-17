@@ -62,8 +62,8 @@ const NbodySimulatorBarnesHut = (props: Props) => {
     const setup = (p5: p5Types, canvasParentRef: Element) => {
         const canvas = p5.createCanvas(mergedProps.widthHeight, mergedProps.widthHeight).parent(canvasParentRef);
         p5.frameRate(60);
-        canvas.attribute("style", mergedProps.canvasStyle);
-        canvasParentRef.setAttribute("style", mergedProps.divStyle);
+        canvas.attribute("style", mergedProps.canvasStyle!);
+        canvasParentRef.setAttribute("style", mergedProps.divStyle!);
     };
 
     const draw = (p5: p5Types) => {
