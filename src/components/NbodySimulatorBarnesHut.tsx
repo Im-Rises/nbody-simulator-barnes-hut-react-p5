@@ -26,6 +26,8 @@ type Props = {
     softening: number;
     showQuadtree: boolean;
     backgroundColor: Color;
+    divStyle?: string;
+    canvasStyle?: string;
 }
 
 const defaultProps: Props = {
@@ -38,7 +40,9 @@ const defaultProps: Props = {
     G: 1,
     softening: 10,
     showQuadtree: false,
-    backgroundColor: new Color(100, 100, 100)
+    backgroundColor: new Color(100, 100, 100),
+    divStyle: "",
+    canvasStyle: ""
 }
 
 const NbodySimulatorBarnesHut = (props: Props) => {
@@ -56,8 +60,10 @@ const NbodySimulatorBarnesHut = (props: Props) => {
     }
 
     const setup = (p5: p5Types, canvasParentRef: Element) => {
-        p5.createCanvas(mergedProps.widthHeight, mergedProps.widthHeight).parent(canvasParentRef);
+        const canvas = p5.createCanvas(mergedProps.widthHeight, mergedProps.widthHeight).parent(canvasParentRef);
         p5.frameRate(60);
+        canvas.attribute("style", mergedProps.canvasStyle);
+        canvasParentRef.setAttribute("style", mergedProps.divStyle);
     };
 
     const draw = (p5: p5Types) => {
